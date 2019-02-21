@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact me</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  <h1><center>Contact me</center></h1>
+    <p>Jika ingin mengontak saya silakan email saya di josevangurusinga@gmail.com</p>
+	<p>Jika teman-teman sekalian ingin memberikan komentar atau saran silakan isi form dibawah ini</p>
+	<div class="info">
+      <label for="example">Masukkan komentar</label>
+      <input id="example" type="text" name="Ntext" size="40">
+      <input id="sent" type="submit" value="Send"> 
+	</div>
+    <p id="para"></p>
+	</form>
+  </body>
+  <script>
+    window.onclick = function(e)
+    {   var id =  e.target.id;   
+       if (id === 'sent')  
+       { var txtbox = document.getElementById('example');  
+         var txt = txtbox.value;
+         $( "#para" ).append( txt + '<br>');
+         $( txtbox ).val('');  
+       }
+    }
+  </script>
+</html>
+
